@@ -28,7 +28,7 @@ exports.get = function(id, callback) {
         var params = [id]
     }
 
-    db.get(sql, params, (err, row) => {
+    db.all(sql, params, (err, row) => {
         if (err) {
             callback(err);
             return;
