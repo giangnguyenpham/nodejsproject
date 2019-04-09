@@ -1,6 +1,7 @@
-import React, { Component } from './node_modules/react';
-import axios from './node_modules/axios';
+import React, { Component } from 'react';
+import axios from 'axios';
 import './login.css';
+import { Link } from "react-router-dom";
 
 export default class Login extends Component {
 
@@ -60,9 +61,15 @@ export default class Login extends Component {
                             <button type="submit" className="btn btn-primary btn-block">Đăng nhập</button>
                         </div>
                     </form>
-                    <p className="text-center">Create an Account</p>
+                    
+                    <p className="text-center"><Link to="/register">Create an Account</Link></p>
+                    
                 </div>
             </div>
         );
     }
 }
+
+
+
+  

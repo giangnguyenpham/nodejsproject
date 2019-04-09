@@ -1,6 +1,7 @@
-import React, { Component } from './node_modules/react';
-import axios from './node_modules/axios';
+import React, { Component } from 'react';
+import axios from 'axios';
 import './register.css';
+import { Link } from "react-router-dom";
 
 export default class Register extends Component {
 
@@ -54,9 +55,9 @@ export default class Register extends Component {
                 <form>
                     <h2>Register</h2>
                     <div className="form-group">
-                        <div className="form-control"><input type="text" className="form-control" name="name" ref="name" placeholder="Name" required="required"/> </div>  	
+                        <input type="text" className="form-control" name="name" ref="name" placeholder="Name" required="required"/>	
                     </div>
-                    <div classNameass="form-group">
+                    <div className="form-group">
         	            <input type="text" className="form-control" name="tel" ref="phone" placeholder="Phone" required="required"/>
                     </div>
 		            <div className="form-group">
@@ -68,8 +69,11 @@ export default class Register extends Component {
                     <div className="form-group">
                         <button type="submit" className="btn btn-success btn-lg btn-block">Register Now</button>
                     </div>
+                    {/* <p className="text-center"><Link to="/">Back Home</Link></p> */}
                 </form>
             </div>
         );
     }
 }
+
+  

@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import Login from './components/Login/Login';
+import Login from './components/login/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css'
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-         <div className="App">
-        <Login />
-      </div>
-      </div>
+      <Login />
     );
   }
 }
