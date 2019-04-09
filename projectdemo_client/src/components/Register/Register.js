@@ -56,7 +56,7 @@ export default class Register extends Component {
                     <div className="form-group">
                         <div className="form-control"><input type="text" className="form-control" name="name" ref="name" placeholder="Name" required="required"/> </div>  	
                     </div>
-                    <div clclassNameass="form-group">
+                    <div classNameass="form-group">
         	            <input type="text" className="form-control" name="tel" ref="phone" placeholder="Phone" required="required"/>
                     </div>
 		            <div className="form-group">
