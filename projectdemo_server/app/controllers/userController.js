@@ -58,7 +58,6 @@ exports.add = function (req, res) {
     });
 };
 
-
 exports.update = function (req, res) {
     User.update(req.params.id, req.body, function (err, user) {
         if (err) {

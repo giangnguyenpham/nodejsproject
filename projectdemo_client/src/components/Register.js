@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import '../App.css';
+import './register.css';
 
 export default class Register extends Component {
 
@@ -52,29 +50,25 @@ export default class Register extends Component {
 
     render() {
         return (
-            <div className="form-login-content">
-                <Header />
-                <div>
-                    <h1 className="title">ĐĂNG KÝ</h1>
+            <div className="signup-form">
+                <form>
+                    <h2>Register</h2>
                     <div className="form-group">
-                        <label htmlFor="name">Tên:</label>
-                        <input type="text" ref="tel" className="form-control" id="name" name="name"/>
+                        <div className="form-control"><input type="text" className="form-control" name="name" ref="name" placeholder="Name" required="required"/> </div>  	
+                    </div>
+                    <div clclassNameass="form-group">
+        	            <input type="text" className="form-control" name="tel" ref="phone" placeholder="Phone" required="required"/>
+                    </div>
+		            <div className="form-group">
+                        <input type="password" className="form-control" name="password" ref="password" placeholder="Password" required="required"/>
+                    </div>
+		            <div className="form-group">
+                        <input type="password" className="form-control" name="confirm_password" placeholder="Confirm Password" required="required"/>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="tel">Số điện thoại:</label>
-                        <input type="text" ref="email" className="form-control" id="tel" name="tel"/>
+                        <button type="submit" className="btn btn-success btn-lg btn-block">Register Now</button>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="pwd">Mật khẩu:</label>
-                        <input type="password" ref="password" className="form-control" id="pwd" name="password"/>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="address">Địa chỉ:</label>
-                        <input type="text" ref="address" className="form-control" id="address" name="address"/>
-                    </div>
-                    <button type="submit" className="btn btn-default" onClick={this.summit}>Đăng Ký</button>
-			    </div>
-                <Footer />
+                </form>
             </div>
         );
     }
