@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router, Link, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import Register from './components/register/Register';
 import Login from './components/login/Login';
+import List from './components/listProducts/List';
 
 ReactDOM.render(
     <Router>
         <Route exact path="/" component={App}/>
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>
+        <Route path="/list" component={List}/>
     </Router>
     , document.getElementById('root'));
 

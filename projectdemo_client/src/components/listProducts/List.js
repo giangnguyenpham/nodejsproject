@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import '../App.css';
-
+import '../../App.css';
 export default class List extends Component {
 
     constructor(props) {
@@ -38,25 +34,25 @@ export default class List extends Component {
         // params.append('password', password);
         // params.append('address', address);
 
-        axios.get('http://localhost:9000/api/users', params,{
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        })
-        .then(function (res) {
-            console.log(res);
-        })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        });    
+        // axios.get('http://localhost:9000/api/users', params,{
+        //     headers: {
+        //         'Content-Type': 'application/x-www-form-urlencoded'
+        //     }
+        // })
+        // .then(function (res) {
+        //     console.log(res);
+        // })
+        // .catch(function (error) {
+        //     // handle error
+        //     console.log(error);
+        // });    
     }
 
     render() {
         return (
-            <div className="form-login-content">
-                <Header />
-                <div>
+            <div>
+            <h1>aaaaaaaaaaaa</h1>
+                {/* <div>
                     <tr className="info">
                     <td>
                         <span>{this.props.user_name}</span>
@@ -72,8 +68,7 @@ export default class List extends Component {
                         <button className="btn btn-danger" onClick={this.remove}>Xóa</button>
                     </td>
                     </tr>
-			    </div>
-                <Footer />
+			    </div> */}
             </div>
         );
     }

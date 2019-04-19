@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './register.css';
-import { Link } from "react-router-dom";
 
 export default class Register extends Component {
 
@@ -27,13 +26,11 @@ export default class Register extends Component {
         let name = this.refs.name.value;
         let tel = this.refs.phone.value;
         let password= this.refs.password.value;
-        let address= this.refs.address.value;
 
         const params = new URLSearchParams();
         params.append('name', name);
         params.append('tel', tel);
         params.append('password', password);
-        params.append('address', address);
 
         axios.post('http://localhost:9000/api/user', params,{
             headers: {
@@ -69,7 +66,6 @@ export default class Register extends Component {
                     <div className="form-group">
                         <button type="submit" className="btn btn-success btn-lg btn-block">Register Now</button>
                     </div>
-                    {/* <p className="text-center"><Link to="/">Back Home</Link></p> */}
                 </form>
             </div>
         );

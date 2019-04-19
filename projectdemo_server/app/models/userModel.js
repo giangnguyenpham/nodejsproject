@@ -43,11 +43,10 @@ exports.add = function(body, callback) {
     var data = {
         name: body.name,
         tel: body.tel,
-        password : md5(body.password),
-        address: body.address
+        password : md5(body.password)
     }
     console.log(data)
-    var sql ='INSERT INTO user (name, tel, password, address) VALUES (?,?,?,?)'
+    var sql ='INSERT INTO user (name, tel, password) VALUES (?,?,?)'
     var params =[data.name, data.tel, data.password, data.address]
     db.run(sql, params, function (err, row) {
         if (err) {
